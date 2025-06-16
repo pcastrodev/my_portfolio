@@ -1,43 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Pedro Castro - Desenvolvedor</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Portfólio | Pedro Castro - DevOps</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
 
-    <header class="header">
-        <a href="#home" class="logo">Pedro.</a>
-    </header>
-    
-    <section class="home">
-        <div class="home-content">
-            <h1>Olá, Eu sou o Pedro Castro</h1>
-            <h3>Desenvolvedor</h3>
-            <p>Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e automação. Tenho conhecimentos práticos em Linux, Docker, AWS, redes e programação com JavaScript e Python. Atualmente, estou focado em me especializar em DevOps, aprendendo sobre CI/CD, containers, infraestrutura como código e cloud computing. Busco constantemente criar soluções eficientes e escaláveis, com um olhar voltado para a integração entre desenvolvimento e operações.</p>
-            <div class="btn-box">
-                <a href="curriculo_pedro.pdf" download="curriculo_pedro.pdf">Currículo</a>
-                <a href="https://wa.link/x656fb" target="_blank" rel="noopener noreferrer">Contato</a>
-            </div>
-        </div>
-    
-        <div class="home-image">
-            <img src="perfil.jpg" alt="Pedro Castro">
-        </div>
-    
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/pedrohenriquealmeidacastro/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/pcastrodev" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
-            <a href="mailto:pcastrodev@gmail.com?subject=Contato%20Profissional&body=Olá%20Pedro,%20gostaria%20de%20falar%20sobre..."><i class='bx bxl-gmail'></i></a>
-        </div>
-    </section>    
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <a href="#" class="logo">Pedro.</a>
+    <nav class="navbar">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ====== HOME / SOBRE ====== -->
+  <section class="home" id="sobre">
+    <div class="home-content">
+      <h1>Olá, eu sou o Pedro Castro</h1>
+      <h3>Futuro Engenheiro DevOps</h3>
+      <p>
+        Sou estudante de Análise e Desenvolvimento de Sistemas com foco em DevOps. Tenho conhecimentos práticos em Linux, Docker, AWS, redes e programação com JavaScript e Python. Estou me aprofundando em CI/CD, containers e infraestrutura como código. Meu objetivo é unir desenvolvimento e operações para criar soluções eficientes, seguras e escaláveis.
+      </p>
+      <div class="btn-box">
+        <a href="curriculo_pedro.pdf" download>Currículo</a>
+        <a href="https://wa.link/x656fb" target="_blank">Contato</a>
+      </div>
+    </div>
+    <div class="home-image">
+      <img src="perfil.jpg" alt="Pedro Castro" />
+    </div>
+  </section>
+
+  <!-- ====== PROJETOS ====== -->
+  <section class="projects" id="projetos">
+    <h2>Projetos</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3>CPF Generator and Validator</h3>
+        <p>CPF Generator and Validator é um projeto em Python que oferece duas funcionalidades principais: gerar CPFs válidos e validar CPFs.</p>
+        <a href="https://github.com/pcastrodev/cpf-generator-validator.git" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="card">
+        <h3>JSBookstore</h3>
+        <p>JSBookstore é uma aplicação em Node.js que simula um sistema de gerenciamento de uma livraria.</p>
+        <a href="https://github.com/pcastrodev/JSBookStore.git" target="_blank">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTATO ====== -->
+  <section class="contact" id="contato">
+    <h2>Contato</h2>
+    <p>Sinta-se à vontade para me chamar nas redes abaixo ou enviar um e-mail direto:</p>
+    <div class="home-sci">
+      <a href="https://www.linkedin.com/in/pedrohenriquealmeidacastro/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/pcastrodev" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="mailto:pcastrodev@gmail.com"><i class='bx bxl-gmail'></i></a>
+    </div>
+  </section>
 
 </body>
-
 </html>
