@@ -1,0 +1,98 @@
+@media (max-width: 1200px) {
+  header { padding: 20px 6%; }
+  section { padding: 110px 6% 70px; }
+  .home-img, .about-img { max-width: 420px; }
+}
+
+@media (max-width: 992px) {
+  .home, .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    text-align: center;
+  }
+
+  .home-img, .about-img {
+    order: -1;
+    max-width: 320px;
+    margin: 0 auto 24px auto;
+  }
+
+  .home-content, .about-content { align-items: center; }
+
+  .btn, .social-media, .social-media .social-icons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-grid, .service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  header.scrolled { padding: 14px 6%; }
+
+  .certs .cert-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .menu-hamburguer { display: flex; }
+
+  .nav {
+    position: fixed;
+    top: 72px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background: rgba(8, 27, 41, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    transition: left 0.35s ease;
+    z-index: 999;
+  }
+
+  .nav.active { left: 0; }
+  .nav a { font-size: 1.1rem; }
+
+  header { padding: 16px 5%; }
+  section { padding: 96px 5% 64px; }
+
+  .home-img, .about-img {
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .social-media { flex-direction: column; gap: 16px; }
+
+  .skills-grid, .service-container { grid-template-columns: 1fr; }
+
+  .btn { width: 100%; max-width: 320px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: clamp(1.8rem, 9vw, 2.2rem); }
+  h2 { font-size: clamp(1.4rem, 7.5vw, 1.8rem); }
+  h3 { font-size: 1rem; }
+  p { font-size: 0.95rem; }
+
+  header { padding: 14px 4.5%; }
+  section { padding: 88px 4.5% 56px; }
+
+  .home-img, .about-img { max-width: 220px; }
+
+  .social-media .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .container { padding-left: 0; padding-right: 0; }
+
+  footer { padding: 20px 0; }
+}

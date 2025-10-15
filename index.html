@@ -1,43 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Pedro Castro - Desenvolvedor</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedro Castro | DevOps, Cloud & Automação</title>
+  <meta name="description" content="Portfólio profissional de Pedro Castro — Desenvolvedor focado em DevOps, Cloud e Automação. CI/CD, Docker, Linux e AWS." />
+  <meta name="keywords" content="Pedro Castro, DevOps, Cloud, AWS, Docker, CI/CD, Linux, Portfólio, Desenvolvedor" />
+  <meta property="og:title" content="Pedro Castro | DevOps, Cloud & Automação" />
+  <meta property="og:description" content="Especialista em automação, cloud e integração contínua. Projetos, skills e contato." />
+  <meta property="og:image" content="./assets/img/perfil.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./vendor/boxicons.min.css" />
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
 </head>
 
 <body>
+  <div id="particles-js"></div>
 
-    <header class="header">
-        <a href="#home" class="logo">Pedro.</a>
-    </header>
-    
-    <section class="home">
-        <div class="home-content">
-            <h1>Olá, Eu sou o Pedro Castro</h1>
-            <h3>Desenvolvedor</h3>
-            <p>Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e automação. Tenho conhecimentos práticos em Linux, Docker, AWS, redes e programação com JavaScript e Python. Atualmente, estou focado em me especializar em DevOps, aprendendo sobre CI/CD, containers, infraestrutura como código e cloud computing. Busco constantemente criar soluções eficientes e escaláveis, com um olhar voltado para a integração entre desenvolvimento e operações.</p>
-            <div class="btn-box">
-                <a href="curriculo_pedro.pdf" download="curriculo_pedro.pdf">Currículo</a>
-                <a href="https://wa.link/x656fb" target="_blank" rel="noopener noreferrer">Contato</a>
+  <header>
+    <a href="#home" class="logo">Pedro <span>Castro</span></a>
+
+    <nav class="nav">
+      <a href="#home" data-scroll>Home</a>
+      <a href="#certs" data-scroll>Certificações</a>
+      <a href="#skills" data-scroll>Competências</a>
+      <a href="#contact" data-scroll>Contato</a>
+    </nav>
+
+    <div class="menu-hamburguer" aria-label="Abrir menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="home container" data-sr="fade-up" data-sr-once="true">
+      <div class="home-content">
+        <h3>Olá, eu sou</h3>
+        <h1>Pedro Castro</h1>
+        <h3><span class="typed-text"></span></h3>
+        <p>
+          Desenvolvedor focado em <strong>DevOps</strong>, <strong>Cloud</strong> e <strong>Automação</strong>. Experiência com
+          <strong>CI/CD</strong>, <strong>Docker</strong>, <strong>Linux</strong> e boas práticas de infraestrutura. Busco criar pipelines
+          robustos, ambientes escaláveis e integrações confiáveis entre desenvolvimento e operações.
+        </p>
+
+        <div class="social-media">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/pedrohenriquealmeidacastro/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/pcastrodev" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="mailto:pcastrodev@gmail.com" aria-label="Email">
+              <i class='bx bxl-gmail'></i>
+            </a>
+          </div>
+          <a class="btn" href="./curriculo_pedro.pdf" download>Download CV</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="./assets/img/perfil.jpg" alt="Foto de perfil de Pedro Castro" />
+      </div>
+    </section>
+
+    <!-- CERTIFICAÇÕES -->
+    <section id="certs" class="certs container" data-sr="fade-up" data-sr-once="true">
+      <h2>Minhas <span style="color:var(--primary)">Certificações</span></h2>
+      <p style="margin-bottom:24px;color:var(--gray)">
+        Conquistas e estudos em andamento. Badges oficiais serão exibidas aqui assim que concluídas.
+      </p>
+
+      <div class="cert-grid" data-sr-stagger="80">
+        <!-- AWS CCP (em andamento) -->
+        <article class="cert-card" data-sr>
+          <span class="cert-pill in-progress">Em andamento</span>
+
+          <div class="cert-top">
+            <div class="cert-badge-wrap">
+              <img class="cert-badge" src="./assets/img/certs/aws-ccp-256.webp" alt="AWS Cloud Practitioner" loading="lazy">
             </div>
-        </div>
-    
-        <div class="home-image">
-            <img src="perfil.jpg" alt="Pedro Castro">
-        </div>
-    
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/pedrohenriquealmeidacastro/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/pcastrodev" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
-            <a href="mailto:pcastrodev@gmail.com?subject=Contato%20Profissional&body=Olá%20Pedro,%20gostaria%20de%20falar%20sobre..."><i class='bx bxl-gmail'></i></a>
-        </div>
-    </section>    
 
+            <div class="cert-head">
+              <h3 class="cert-title">AWS Certified Cloud Practitioner (CLF-C02)</h3>
+              <div class="cert-meta">
+                <span class="cert-issuer">Amazon Web Services</span>
+                <span class="cert-sep">•</span>
+                <span class="cert-flag" title="Idioma do exame">🇺🇸</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-progressbar" data-progress="20">
+            <div class="cert-progressbar-fill"></div>
+          </div>
+
+          <div class="cert-bottom">
+            <span class="cert-status"><strong>Progresso:</strong> <span class="cert-percent">20%</span></span>
+            <span class="cert-tags">
+              <span class="tag">Cloud</span>
+              <span class="tag">Fundamentals</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- LPI Linux Essentials (em andamento) -->
+        <article class="cert-card" data-sr>
+          <span class="cert-pill in-progress">Em andamento</span>
+
+          <div class="cert-top">
+            <div class="cert-badge-wrap">
+              <img class="cert-badge" src="./assets/img/certs/lpi-linux-essentials-256.webp" alt="LPI Linux Essentials" loading="lazy">
+            </div>
+
+            <div class="cert-head">
+              <h3 class="cert-title">Linux Essentials (LPI)</h3>
+              <div class="cert-meta">
+                <span class="cert-issuer">Linux Professional Institute</span>
+                <span class="cert-sep">•</span>
+                <span class="cert-flag" title="Idioma do exame">🇺🇸</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-progressbar" data-progress="60">
+            <div class="cert-progressbar-fill"></div>
+          </div>
+
+          <div class="cert-bottom">
+            <span class="cert-status"><strong>Progresso:</strong> <span class="cert-percent">60%</span></span>
+            <span class="cert-tags">
+              <span class="tag">Linux</span>
+              <span class="tag">CLI</span>
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills container" data-sr="fade-up" data-sr-once="true">
+      <h2>Minhas <span style="color:var(--primary)">Competências</span></h2>
+
+      <div class="skills-categories" data-sr-stagger="80">
+        <button class="skill-category-btn active" data-category="all" data-sr>Todas</button>
+        <button class="skill-category-btn" data-category="devops" data-sr>DevOps</button>
+        <button class="skill-category-btn" data-category="cloud" data-sr>Cloud</button>
+        <button class="skill-category-btn" data-category="backend" data-sr>Backend</button>
+        <button class="skill-category-btn" data-category="linux" data-sr>Linux</button>
+      </div>
+
+      <div class="skills-grid" data-sr-stagger="80" data-sr-once="true">
+        <div class="skill-item" data-category="devops" data-sr>
+          <div class="skill-header">
+            <i class='bx bx-cog skill-icon'></i>
+            <span class="skill-name">CI/CD</span>
+          </div>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+          <div class="skill-percentage">90%</div>
+          <div class="skill-tags">
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Pipelines</span>
+            <span class="skill-tag">Testing</span>
+          </div>
+        </div>
+
+        <div class="skill-item" data-category="devops" data-sr>
+          <div class="skill-header">
+            <i class='bx bx-package skill-icon'></i>
+            <span class="skill-name">Containers</span>
+          </div>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 88%"></div>
+          </div>
+          <div class="skill-percentage">88%</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Compose</span>
+            <span class="skill-tag">Images</span>
+          </div>
+        </div>
+
+        <div class="skill-item" data-category="cloud" data-sr>
+          <div class="skill-header">
+            <i class='bx bx-cloud skill-icon'></i>
+            <span class="skill-name">Cloud</span>
+          </div>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 80%"></div>
+          </div>
+          <div class="skill-percentage">80%</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">S3</span>
+          </div>
+        </div>
+
+        <div class="skill-item" data-category="backend" data-sr>
+          <div class="skill-header">
+            <i class='bx bx-code-curly skill-icon'></i>
+            <span class="skill-name">Backend</span>
+          </div>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 72%"></div>
+          </div>
+          <div class="skill-percentage">72%</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">API</span>
+            <span class="skill-tag">Auth</span>
+          </div>
+        </div>
+
+        <div class="skill-item" data-category="linux" data-sr>
+          <div class="skill-header">
+            <i class='bx bx-terminal skill-icon'></i>
+            <span class="skill-name">Linux</span>
+          </div>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 86%"></div>
+          </div>
+          <div class="skill-percentage">86%</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Shell</span>
+            <span class="skill-tag">Networking</span>
+            <span class="skill-tag">Services</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container" data-sr="fade-up" data-sr-once="true">
+      <h2>Entre em <span style="color:var(--primary)">Contato</span></h2>
+
+      <form action="#" method="post" novalidate>
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+        </div>
+        <div class="input-box full-width">
+          <input type="text" name="subject" placeholder="Assunto" />
+          <textarea name="message" placeholder="Sua mensagem"></textarea>
+        </div>
+        <button class="btn" type="submit">Enviar mensagem</button>
+      </form>
+
+      <div class="social-media" style="justify-content:center; margin-top:24px">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/pedrohenriquealmeidacastro/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://github.com/pcastrodev" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://wa.link/x656fb" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class='bx bxl-whatsapp'></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Pedro Castro. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="./vendor/particles.min.js"></script>
+  <script src="./js/particles.js" defer></script>
+  <script src="./js/scrollreveal.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </body>
-
 </html>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  /* CORE PALETTE */
+  --primary: #00abf0;
+  --accent: #6C63FF;
+
+  /* SURFACES & TEXT */
+  --bg-dark: #081b29;
+  --bg-light: #0e2a40;
+  --text: #ededed;
+  --gray: #b8c2c8;
+
+  /* TYPOGRAPHY */
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  --font-code: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* RADII */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  /* SPACING SCALE */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* ELEVATION */
+  --shadow-sm: 0 6px 14px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 20px 36px rgba(0, 0, 0, 0.28);
+
+  /* LAYOUT */
+  --container-max: 1220px;
+
+  /* MOTION */
+  --transition: all .28s cubic-bezier(.16,1,.3,1);
+
+  /* EFFECTS */
+  --focus-ring: 0 0 0 2px color-mix(in oklab, var(--primary) 35%, transparent);
+  --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --transition: none; }
+}
