@@ -1,16 +1,27 @@
 (function () {
   'use strict';
-  const qs = (s, ctx = document) => ctx.querySelector(s);
+  const qs  = (s, ctx = document) => ctx.querySelector(s);
   const qsa = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
 
   const header = qs('header');
+
+  // mantém a variável CSS --header-h igual à altura real do header
+  const syncHeaderVar = () => {
+    if (!header) return;
+    const h = Math.round(header.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--header-h', h + 'px');
+  };
+
   const onScroll = () => {
     if (!header) return;
     if (window.scrollY > 50) header.classList.add('scrolled');
     else header.classList.remove('scrolled');
   };
+
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('resize', syncHeaderVar);
+  window.addEventListener('orientationchange', syncHeaderVar);
+  onScroll(); syncHeaderVar();
 
   const burger = qs('.menu-hamburguer');
   const nav = qs('.nav');
@@ -18,6 +29,7 @@
     burger.addEventListener('click', () => {
       burger.classList.toggle('active');
       nav.classList.toggle('active');
+      syncHeaderVar(); // garante cálculo ao abrir/fechar menu
     });
     qsa('.nav a').forEach((link) => {
       link.addEventListener('click', (e) => {
@@ -25,11 +37,12 @@
         if (href && href.startsWith('#')) {
           e.preventDefault();
           const target = qs(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         if (nav.classList.contains('active')) {
           burger.classList.remove('active');
           nav.classList.remove('active');
+          syncHeaderVar();
         }
       });
     });
@@ -41,7 +54,7 @@
       if (!href || !href.startsWith('#')) return;
       e.preventDefault();
       const target = qs(href);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 

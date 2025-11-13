@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
 @import url('./variables.css');
 
+/* altura padrão do header (atualizada via JS) */
+:root { --header-h: 72px; }
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg-dark);color:var(--text);font-family:var(--font-primary);line-height:1.6;overflow-x:hidden}
@@ -8,7 +11,7 @@ a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%;height:auto}
 ul{list-style:none}
 
-#particles-js{position:fixed;inset:0;z-index:-1;opacity:.3}
+#particles-js{position:fixed;inset:0;z-index:-1;opacity:.28;pointer-events:none}
 
 h1,h2,h3,h4{font-weight:700;line-height:1.2;margin-bottom:16px}
 h1{font-size:clamp(2.2rem,5vw,3.6rem);background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
@@ -34,7 +37,7 @@ header.scrolled{padding:14px 5%;background:rgba(8,27,41,.92)}
 .menu-hamburguer.active .bar:nth-child(2){opacity:0}
 .menu-hamburguer.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
-section{min-height:100vh;padding:120px 5% 80px;display:flex;flex-direction:column;justify-content:center;animation:fadeIn .8s cubic-bezier(.16,1,.3,1) forwards}
+section{min-height:100vh;padding:120px 5% 80px;display:flex;flex-direction:column;justify-content:center;animation:fadeIn .8s cubic-bezier(.16,1,.3,1) forwards;scroll-margin-top:calc(var(--header-h,72px) + 12px)}
 section:nth-child(2){animation-delay:.1s}
 section:nth-child(3){animation-delay:.2s}
 section:nth-child(4){animation-delay:.3s}
@@ -96,6 +99,7 @@ footer p{color:var(--gray);font-size:.95rem}
 
 .light-effect{position:fixed;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle, color-mix(in oklab,var(--primary) 35%, transparent) 0%, transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
 
+/* ====== Certificações ====== */
 .certs h2{text-align:center;margin-bottom:18px}
 .certs .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px}
 .cert-card{position:relative;padding:22px 20px 18px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:16px;backdrop-filter:blur(6px);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;box-shadow:0 10px 22px rgba(0,0,0,.18);overflow:hidden}

@@ -14,8 +14,8 @@
 
   .home-img, .about-img {
     order: -1;
-    max-width: 320px;
-    margin: 0 auto 24px auto;
+    max-width: 340px;
+    margin: 0 auto 22px auto;
   }
 
   .home-content, .about-content { align-items: center; }
@@ -33,7 +33,7 @@
 
   header.scrolled { padding: 14px 6%; }
 
-  .certs .cert-grid { grid-template-columns: 1fr; }
+  .certs .cert-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -41,11 +41,11 @@
 
   .nav {
     position: fixed;
-    top: 72px;
+    top: calc(var(--header-h, 72px));
     left: -100%;
     width: 100%;
-    height: calc(100vh - 72px);
-    background: rgba(8, 27, 41, 0.95);
+    height: calc(100vh - var(--header-h, 72px));
+    background: rgba(8, 27, 41, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     display: flex;
@@ -55,17 +55,28 @@
     gap: 28px;
     transition: left 0.35s ease;
     z-index: 999;
+    padding: 12px 5% calc(env(safe-area-inset-bottom) + 24px);
   }
 
   .nav.active { left: 0; }
   .nav a { font-size: 1.1rem; }
 
   header { padding: 16px 5%; }
-  section { padding: 96px 5% 64px; }
+
+  /* usa a altura real do header para dar respiro, evitando sobreposição */
+  section {
+    min-height: auto;
+    padding: calc(var(--header-h, 72px) + 24px) 5% 64px;
+  }
+
+  /* hero precisa de um respiro maior que as demais */
+  #home {
+    padding-top: calc(var(--header-h, 72px) + 56px);
+  }
 
   .home-img, .about-img {
     max-width: 280px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .social-media { flex-direction: column; gap: 16px; }
@@ -73,22 +84,39 @@
   .skills-grid, .service-container { grid-template-columns: 1fr; }
 
   .btn { width: 100%; max-width: 320px; }
+
+  /* contato mais enxuto no mobile */
+  form { gap: 14px; }
+  .input-box { flex-direction: column; gap: 14px; }
+  form input, form textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .certs .cert-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: clamp(1.8rem, 9vw, 2.2rem); }
+  h1 { font-size: clamp(1.9rem, 9vw, 2.3rem); }
   h2 { font-size: clamp(1.4rem, 7.5vw, 1.8rem); }
   h3 { font-size: 1rem; }
-  p { font-size: 0.95rem; }
+  p { font-size: 0.98rem; }
 
   header { padding: 14px 4.5%; }
-  section { padding: 88px 4.5% 56px; }
 
-  .home-img, .about-img { max-width: 220px; }
+  section {
+    padding: calc(var(--header-h, 68px) + 18px) 4.5% 56px;
+  }
+  #home {
+    padding-top: calc(var(--header-h, 68px) + 44px);
+  }
+
+  .home-img, .about-img { max-width: 230px; }
 
   .social-media .social-icons a {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 1rem;
   }
 
