@@ -5,7 +5,6 @@
 
   const header = qs('header');
 
-  // mantém a variável CSS --header-h igual à altura real do header
   const syncHeaderVar = () => {
     if (!header) return;
     const h = Math.round(header.getBoundingClientRect().height);
@@ -29,7 +28,7 @@
     burger.addEventListener('click', () => {
       burger.classList.toggle('active');
       nav.classList.toggle('active');
-      syncHeaderVar(); // garante cálculo ao abrir/fechar menu
+      syncHeaderVar(); 
     });
     qsa('.nav a').forEach((link) => {
       link.addEventListener('click', (e) => {

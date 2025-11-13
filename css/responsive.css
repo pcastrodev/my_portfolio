@@ -57,21 +57,18 @@
     z-index: 999;
     padding: 12px 5% calc(env(safe-area-inset-bottom) + 24px);
   }
-
   .nav.active { left: 0; }
   .nav a { font-size: 1.1rem; }
 
   header { padding: 16px 5%; }
 
-  /* usa a altura real do header para dar respiro, evitando sobreposição */
   section {
     min-height: auto;
     padding: calc(var(--header-h, 72px) + 24px) 5% 64px;
   }
-
-  /* hero precisa de um respiro maior que as demais */
   #home {
     padding-top: calc(var(--header-h, 72px) + 56px);
+    padding-bottom: 96px;
   }
 
   .home-img, .about-img {
@@ -80,12 +77,12 @@
   }
 
   .social-media { flex-direction: column; gap: 16px; }
+  #home .social-media { margin-bottom: 28px; }
+  #home .social-media .btn { width: 100%; max-width: 360px; }
 
   .skills-grid, .service-container { grid-template-columns: 1fr; }
-
   .btn { width: 100%; max-width: 320px; }
 
-  /* contato mais enxuto no mobile */
   form { gap: 14px; }
   .input-box { flex-direction: column; gap: 14px; }
   form input, form textarea {
@@ -95,13 +92,16 @@
   }
 
   .certs .cert-grid { grid-template-columns: 1fr; }
+
+  #contact { padding-bottom: 120px; }
+  #contact .social-icons { margin-top: 16px; margin-bottom: 28px; }
 }
 
 @media (max-width: 480px) {
   h1 { font-size: clamp(1.9rem, 9vw, 2.3rem); }
   h2 { font-size: clamp(1.4rem, 7.5vw, 1.8rem); }
   h3 { font-size: 1rem; }
-  p { font-size: 0.98rem; }
+  p  { font-size: 0.98rem; }
 
   header { padding: 14px 4.5%; }
 
@@ -110,6 +110,7 @@
   }
   #home {
     padding-top: calc(var(--header-h, 68px) + 44px);
+    padding-bottom: 104px;
   }
 
   .home-img, .about-img { max-width: 230px; }
@@ -121,6 +122,9 @@
   }
 
   .container { padding-left: 0; padding-right: 0; }
+
+  #contact { padding-bottom: 140px; }
+  #contact .social-icons { margin-bottom: 32px; }
 
   footer { padding: 20px 0; }
 }
